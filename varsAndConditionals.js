@@ -5,7 +5,7 @@
 */ 
 
 let johnSnowAttack = 25
-let jamieLannisterAttack = 35
+let jamieLannisterAttack = 55
 
 if (johnSnowAttack > jamieLannisterAttack) {
     console.log("John Snow has better attack than Jamie Lannister")
@@ -54,14 +54,36 @@ if (coinLandsHeads === true){
 }
 
 //jamie attacks john 5 times
-for (let i = 0; i < 5; i++) {
-    johnSnowHealth -= (jamieLannisterAttack - johnSnowDefense)
-    console.log('john\'s health is now' + johnSnowHealth)
-}
+// for (let i = 0; i < 5; i++) {
+//     johnSnowHealth -= (jamieLannisterAttack - johnSnowDefense)
+//     if (johnSnowHealth <= 0){
+//         console.log('john has been slain')
+//         break;
+//     }else{
+//     console.log('john\'s health is now ' + johnSnowHealth)
+// } 
+// }
 
+i = 0
+
+while (i < 5){
+    i++
+    johnSnowHealth -= (jamieLannisterAttack - johnSnowDefense)
+     if (johnSnowHealth <= 0){
+        console.log('john has been slain')
+        break;
+     } else {
+        console.log('john\'s health is now ' + johnSnowHealth)
+     }
+}
 // write logic in the for loop if jon's health gets 0 or less, in which case, you will print that John is dead
 // and you will stop further loop iterations (see the "break" JS keyword for leaving a loop early)
 
 // Post-lab assignment 2:
 //write the for loop (including the logic you wrote for the first assignment) as while loop.
 // it should behave exactly the same
+
+
+
+
+
